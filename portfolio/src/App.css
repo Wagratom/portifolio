@@ -1,0 +1,8 @@
+
+body {
+	background: linear-gradient(to bottom, rebeccapurple 200px, white 200px);
+}
+
+body p {
+	padding: 0;
+}
