@@ -9,7 +9,7 @@ export default function PersonalInformation() {
 				<p>
 					Sou um estudante de Engenharia de Software onde o foco principal do meu aprendizado é a programação em linguagem C/C++.<br></br>
 					Além disso, estou cursando a faculdade de Análise e Desenvolvimento de Sistemas (ADS).<br></br>
-					Quando não estou estudando, dedico meu tempo ao aprendizado de outras linguagens, como Python, JavaScript e HTML, ampliando meu conhecimento em desenvolvimento de software.
+					Quando não estou estudando, dedico meu tempo ao aprendizado de outras linguagens, como Python, TypeScript HTML entre outras, ampliando meu conhecimento em desenvolvimento de software.
 				</p>
 			</div>
 			<div className='d-flex my-4 justify-content-between'>

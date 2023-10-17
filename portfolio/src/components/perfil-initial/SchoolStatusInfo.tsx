@@ -1,6 +1,6 @@
 export default function SchoolStatusInfo() {
 	return (
-		<div className='row'>
+		<div className='row text-center'>
 			<div className='col-md-6 col-sm-12 d-flex align-items-center flex-column'>
 				<p className='fw-bold'>Faculdades</p>
 				<p>Engenharia de Software - 42 São Paulo (2022 - 2023)<br></br>
@@ -13,4 +13,3 @@ export default function SchoolStatusInfo() {
 		</div>
 	);
 }
-	
