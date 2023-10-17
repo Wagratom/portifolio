@@ -104,9 +104,9 @@ export default function Projects42() {
 					<p className='ms-3'><strong>Objetivo: </strong>{projeto.objective}<br></br>
 						<strong>Bonus: </strong>{projeto.bonus}</p>
 					<hr className=''></hr>
-					<div className='d-flex'>
+					<div className='d-flex flex-wrap'>
 						{projeto.tags.map((tag, index) => (
-							<p className={index === 0 ? 'ms-2 fw-bold' : 'ms-4 fw-bold'}>#{tag}</p>)
+							<p className='ms-3 fw-bold'>#{tag}</p>)
 						)}
 					</div>
 				</div>
