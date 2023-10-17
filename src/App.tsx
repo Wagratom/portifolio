@@ -10,7 +10,7 @@ function App() {
 			<BrowserRouter>
 				<Perfil />
 				<Routes>
-					<Route path="portifolio/" element={<PagInitial />} />
+					<Route path="/" element={<PagInitial />} />
 					<Route path="/42school" element={<PagSchool />} />
 				</Routes>
 			</BrowserRouter>
