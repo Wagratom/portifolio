@@ -71,19 +71,19 @@ const projetos: Projeto[] = [
 	{
 		name: 'CPP',
 		objective: '10 modulos de C++ para aprender os conceitos básicos da linguagem. E orientação a objetos.',
-		tags: ['C++ 98', 'Orientação a Objetos', 'iteratores', 'referencias', '...']
+		tags: ['C++ 98', 'Classes', 'Orientação a Objetos', 'iteratores', 'referencias', ' ...']
 	},
 	{
 		name : 'Inception',
-		objective : 'Subir uma aplicação Docker usando docker-compose para criar contêineres para NGINX, WordPress e MariaDB, seguindo regras específicas. (Não usar DockerHub)',
+		objective : 'Subir uma aplicação Docker usando docker-compose para criar contêineres para NGINX, WordPress e MariaDB, seguindo regras específicas. (Não usar DockerHub, entre outras)',
 		bonus : 'Cache Redis para WordPress, servidor FTP, site estático, Adminer e serviço de escolha.',
 		tags : ['Docker-compose', 'Volumes, Networks, Dockerfiles', 'Administração de Sistemas']
 	},
 	{
 		name : 'Webserv',
-		objective : 'Desenvolver um servidor HTTP em C++ 98, não bloqueante capaz de lidar com multiplos clientes e suportar métodos como HTTP, GET, POST e DELETE.',
+		objective : 'Desenvolver um servidor HTTP em C++ 98, capaz de lidar com multiplos clientes e suportar métodos como HTTP, GET, POST, DELETE. Status de erro...',
 		bonus : 'Bônus: Adicionar suporte a cookies e gerenciamento de sessões, lidar com vários programas CGI.',
-		tags : ['HTTP', 'CGI', 'Sockets', 'Manipulação de I/O']
+		tags : ['HTTP', 'CGI', 'Sockets', 'Manipulação de I/O', 'NGINX']
 	}
 ];
 
