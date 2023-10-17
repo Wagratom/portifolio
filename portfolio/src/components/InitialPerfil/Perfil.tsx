@@ -5,7 +5,7 @@ import SchoolStatusInfo from './SchoolStatusInfo';
 
 export default function Perfil() {
 	return (
-		<div className='bg-light rounded mb-5 container' style={{ marginTop: '100px' }}>
+		<div className='bg-light rounded mb-5 container p-2' style={{ marginTop: '100px' }}>
 			<div className='borda-foto'>
 				<div className='div-inicial'>
 					<img src={luffySorrindo} className="App-logo" alt="logo" />

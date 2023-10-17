@@ -1,4 +1,4 @@
-import { Projeto } from './typeData/Projetos';
+import { Projeto } from '../typeData/Projetos';
 
 const projetos: Projeto[] = [
 	{

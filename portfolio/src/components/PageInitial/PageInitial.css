@@ -1,0 +1,13 @@
+.infos-project {
+	font-size: .875rem;
+	line-height: 1.1;
+	color: #525252;
+}
+
+#tools-itau p {
+	font-size: .875rem;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
