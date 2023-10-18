@@ -8,8 +8,9 @@ export default function Home() {
 				<div className='rounded bg-light me-md-3 p-3'>
 					<p className='fs-4 fw-bold'>Links Relevantes</p>
 					<ul className='d-flex flex-column' id='important-links'>
-						<a href='/42school' style={{textDecoration: 'none'}}>42 Sâo Paulo</a>
-						<a href='/descomplica' style={{textDecoration: 'none'}}>Descomplica</a>
+						<a href='/42school'>42 Sâo Paulo</a>
+						<a href='/descomplica'>Descomplica</a>
+						<a href="https://ibacap.netlify.app/" target="_blank">IBACAP</a>
 					</ul>
 				</div>
 			</div>
