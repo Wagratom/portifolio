@@ -10,7 +10,7 @@ export default function Home() {
 					<ul className='d-flex flex-column' id='important-links'>
 						<a href='/42school'>42 Sâo Paulo</a>
 						<a href='/descomplica'>Descomplica</a>
-						<a href="https://ibacap.netlify.app/" target="_blank">IBACAP</a>
+						<a href="https://ibacap.netlify.app/">IBACAP</a>
 					</ul>
 				</div>
 			</div>
