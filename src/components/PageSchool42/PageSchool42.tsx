@@ -1,4 +1,4 @@
-import SchoolInformation from './Information';
+import SchoolInformation from './introduction42';
 import Projects42 from './Projects42';
 import './astronauta.css';
 
