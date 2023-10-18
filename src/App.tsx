@@ -1,8 +1,9 @@
 import './App.css';
-import PagSchool from './components/PageSchool42/PageSchool42';
-import PagInitial from './components/home/home';
+import PageSchool42 from './components/PageSchool42/PageSchool42';
+import PagInitial from './components/home/Home';
 import Perfil from './components/Perfil/Perfil';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import PageSchoolDescomplica from './components/descomplica/PageSchoolDescomplica';
 
 function App() {
 	return (
@@ -11,7 +12,8 @@ function App() {
 				<Perfil />
 				<Routes>
 					<Route path="/" element={<PagInitial />} />
-					<Route path="/42school" element={<PagSchool />} />
+					<Route path="/42school" element={<PageSchool42 />} />
+					<Route path="/descomplica" element={<PageSchoolDescomplica />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

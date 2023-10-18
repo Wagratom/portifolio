@@ -1,7 +1,7 @@
-import './PageInitial.css';
+import './Home.css';
 import Projects from './Projects';
 
-export default function PagInitial() {
+export default function Home() {
 	return (
 		<div className="row container g-0 m-auto">
 			<div className='col-md-4 col-sm-12 mb-3'>
@@ -9,7 +9,7 @@ export default function PagInitial() {
 					<p className='fs-4 fw-bold'>Links Relevantes</p>
 					<ul className='d-flex flex-column' id='important-links'>
 						<a href='/42school' style={{textDecoration: 'none'}}>42 Sâo Paulo</a>
-						<a href='/42school' style={{textDecoration: 'none'}}>Descomplica</a>
+						<a href='/descomplica' style={{textDecoration: 'none'}}>Descomplica</a>
 					</ul>
 				</div>
 			</div>

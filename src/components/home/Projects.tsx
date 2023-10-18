@@ -23,7 +23,7 @@ export default function Projects() {
 		<div className='col-md-8 col-sm-12' id='projetos-information'>
 			{relevantProjects.map((project) => (
 				<div className='row g-0 bg-light mb-3 p-3 rounded shadow-sm'>
-					<p className="fw-bold">{project.name}</p>
+					<p className="fw-bold">{project.name} - 2023</p>
 					<div className="col-md-8 p-1" id='labs-itau'>
 						<p className="infos-project" dangerouslySetInnerHTML={{ __html: project.objective }}></p>
 					</div>
