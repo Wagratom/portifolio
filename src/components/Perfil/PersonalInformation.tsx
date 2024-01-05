@@ -25,7 +25,7 @@ export default function PersonalInformation() {
 					<a href='https://www.linkedin.com/in/wagratom-wallas-ferreira-santos-9657a421a/'>
 						<AiFillLinkedin size={20} color='#000' style={{ marginLeft: '5px' }} />
 					</a>
-					<a href='https://www.linkedin.com/in/wagratom-wallas-ferreira-santos-9657a421a/'>
+					<a href='https://github.com/Wagratom'>
 						<AiFillGithub size={20} color='#000' style={{ marginLeft: '5px' }} />
 					</a>
 					<a href='https://www.instagram.com/wagratom/'>
