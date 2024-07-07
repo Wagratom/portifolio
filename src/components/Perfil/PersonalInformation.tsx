@@ -7,21 +7,25 @@ export default function PersonalInformation() {
 			<div id='personal-summary'>
 				<h2>Wagraton Wallas</h2>
 				<p>
-					Sou um estudante de Engenharia de Software onde o foco principal do meu aprendizado é a programação em linguagem C/C++.<br></br>
-					Além disso, estou cursando a faculdade de Análise e Desenvolvimento de Sistemas (ADS).<br></br>
-					Quando não estou estudando, dedico meu tempo ao aprendizado de outras linguagens, como Python, TypeScript HTML entre outras, ampliando meu conhecimento em desenvolvimento de software.
+					Olá! Sou formado pela Escola 42 São Paulo, uma renomada instituição focada em fundamentos de programação.
+					Durante minha jornada, adquiri experiência com diversas tecnologias, incluindo C/C++, Shell, Python, React, Node.js, SQL, Docker, Git, entre outras.
+				</p>
+				<br></br>
+				<p>
+					Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na Faculdade Descomplica e estagiando no Itaú,
+					onde colaboro com o monitoramento de equipamentos e agências. Meu objetivo é encontrar uma oportunidade como desenvolvedor full remote.
 				</p>
 			</div>
-			<div className='d-flex my-4 justify-content-between'>
-				<div className='d-flex' id='location'>
+			<div className='row mt-2'>
+				<div className='col-md-4'>
 					<MdOutlinePlace size={20} color='#000' />
-					<p className='fw-bold'>Montes Claros - MG</p>
+					<p className='fw-bold'>São Paulo - SP</p>
 				</div>
-				<div className='d-flex' id='location'>
+				<div className='col-md-4'>
 					<MdOutlineCake size={20} color='#000' />
 					<p className='fw-bold'>17 / Outubro / 2002 - 21 anos</p>
 				</div>
-				<div className='d-flex' id='location'>
+				<div className='col-md-4 d-flex justify-content-center align-items-center'>
 					<a href='https://www.linkedin.com/in/wagratom-wallas-ferreira-santos-9657a421a/'>
 						<AiFillLinkedin size={20} color='#000' style={{ marginLeft: '5px' }} />
 					</a>

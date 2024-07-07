@@ -46,13 +46,13 @@ const projetos: Projeto[] = [
 
 	{
 		name: 'Minishell',
-		objective: 'Desenvolver um shell que permite a execução de comandos, manipulação de processos e redirecionamento de entrada/saída.',
+		objective: 'Desenvolver um shell que permite a execução de comandos, manipulação de processos e redirecionamento de I/O.',
 		bonus: 'Implementar recursos avançados, como operadores lógicos "&&" e "||", expansão de curingas "*", e suporte para prioridades com parênteses.',
 		tags: ['Redirecionamento de I/O', 'Variáveis de Ambiente', 'Manipulação de Processos']
 	},
 	{
 		name: 'Philo',
-		objective: 'Desenvolver um programa que simula a ação de filósofos em uma mesa redonda, comendo, pensando e dormindo, evitando que morram de fome.',
+		objective: 'Simular threads representando filósofos em uma mesa redonda, onde eles comem, pensam e dormem, evitando a fome.',
 		bonus: 'Implementar uma versão de bônus do programa que utiliza processos e semáforos em vez de threads e mutexes.',
 		tags: ['Threads', 'Mutexes', 'Semáforos']
 	},
@@ -84,6 +84,11 @@ const projetos: Projeto[] = [
 		objective : 'Desenvolver um servidor HTTP em C++ 98, capaz de lidar com multiplos clientes e suportar métodos como HTTP, GET, POST, DELETE. Status de erro...',
 		bonus : 'Bônus: Adicionar suporte a cookies e gerenciamento de sessões, lidar com vários programas CGI.',
 		tags : ['HTTP', 'CGI', 'Sockets', 'Manipulação de I/O', 'NGINX']
+	},
+	{
+		name : 'Transcendence',
+		objective : 'Desenvolver um jogo web multiplayer em tempo real de Pong, com funcionalidades como loja, chat, e partidas 1x1.',
+		tags : ['Node.js', 'React', 'Websockets', 'Prisma', 'Design Patterns', ' ...']
 	}
 ];
 
