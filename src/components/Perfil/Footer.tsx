@@ -30,13 +30,13 @@ export default function FolderPerfil(): JSX.Element {
 			<hr />
 			<div style={contentFooter}>
 				<div style={contentRedirectsIcons}>
-					<a className="text-light" type="button" href="https://github.com/Wagratom">
+					<a style={{color: 'white'}} type="button" href="https://github.com/Wagratom">
 						<FaGithub size={30} />
 					</a>
-					<a className="text-light" type="button" href="https://www.instagram.com/wagratom/">
+					<a style={{color: 'white'}} type="button" href="https://www.instagram.com/wagratom/">
 						<IoLogoInstagram size={30} />
 					</a>
-					<a className="text-light" type="button" href="https://www.linkedin.com/in/wagratom-wallas-9657a421a/">
+					<a style={{color: 'white'}} type="button" href="https://www.linkedin.com/in/wagratom-wallas-9657a421a/">
 						<AiOutlineLinkedin size={30} />
 					</a>
 				</div>

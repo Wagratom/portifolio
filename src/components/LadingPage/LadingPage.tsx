@@ -21,7 +21,7 @@ export type dataConvite = {
 	myNickname: string,
 }
 
-export default function GameLanderPage(): JSX.Element {
+export default function LadingPage(): JSX.Element {
 
 	let [collisionPnt, setCollisionPnt] = useState<string>('');
 	const gameContainerRef = useRef<HTMLDivElement>(null);
@@ -250,10 +250,7 @@ export default function GameLanderPage(): JSX.Element {
 	const cssGameContainer: React.CSSProperties = {
 		height: '100vh !important',
 		width: '100vw !important',
-		overflow: 'hidden',
 	}
-
-
 
 	return (
 		<div ref={gameContainerRef} style={cssGameContainer}>

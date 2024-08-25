@@ -1,6 +1,6 @@
 import backgroundPhoto from '../../assets/perfil/ww.png';
 import luffyFugindo from '../../assets/perfil/presencial.gif';
-import luffyIndo from '../../assets/perfil/presencial.gif';
+import luffyIndo from '../../assets/perfil/remoto.gif';
 import ButtonPerfil from './ButtonPerfil';
 import { useRef } from 'react';
 
@@ -42,7 +42,6 @@ export default function PhotoPerfil() {
 
 	const setLuffyFugindo = () => {
 		if (gifLuffy.current) {
-			console.log(gifLuffy.current.src);
 			gifLuffy.current.src = luffyFugindo;
 		}
 	}
@@ -57,20 +56,20 @@ export default function PhotoPerfil() {
 		<div style={mainDiv}>
 			<div style={cssButtons}>
 				<ButtonPerfil
-					content="Remoto"
-					type="button"
-					function={setLuffyIndo}
-				/>
-				<ButtonPerfil
 					content="Presencial"
 					type="button"
 					function={setLuffyFugindo}
+				/>
+				<ButtonPerfil
+					content="Remoto"
+					type="button"
+					function={setLuffyIndo}
 				/>
 			</div>
 			<div style={{ display: 'flex' }}>
 				<img
 					style={cssImagem}
-					src={luffyFugindo} alt="logo"
+					src={luffyIndo} alt="logo"
 					ref={gifLuffy}
 				/>
 				<div style={cssDivImagem}> </div>

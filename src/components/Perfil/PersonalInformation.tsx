@@ -10,7 +10,7 @@ export default function PersonalInformation() {
 				<h2>Wagraton Wallas</h2>
 				<p>
 					Olá! Sou formado pela Escola 42 São Paulo, uma renomada instituição focada em fundamentos de programação.
-					Durante minha jornada, adquiri experiência com diversas tecnologias, incluindo C/C++, Shell, Python, React, Node.js, SQL, Docker, Git, entre outras.
+					Durante minha jornada, adquiri experiência com diversas tecnologias, incluindo C/C++, Python, Nestjs, JS, TS, React, SQL, Docker compose, Git, entre outras.
 				</p>
 				<br></br>
 				<p>

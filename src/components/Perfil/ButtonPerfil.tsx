@@ -24,13 +24,14 @@ export default function ButtonPerfil(props: propsButtonConfigurations): JSX.Elem
 		height: "2.5rem",
 		padding: "0.6rem 0.5rem 0.5rem 0.5rem",
 		gap: "0.5rem",
+		cursor: "pointer",
+
 	}
 
 	const cssButtonDiv: React.CSSProperties = {
 		display: "flex",
 		alignItems: "end",
 		paddingBottom: "1rem",
-		cursor: "pointer",
 	}
 
 	const cssParagraph: React.CSSProperties = {
