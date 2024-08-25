@@ -1,18 +1,20 @@
-
-body {
-	background: linear-gradient(to bottom, #a1a1a1 200px, #e6e6e6 200px);
-	font-family: 'Roboto', sans-serif;
+html {
+	font-size: 62.5%;
 }
 
-body p {
-	padding: 0;
+* {
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
 }
 
 a {
 	color: rgba(1, 0, 0, 0.574);
 	font-weight: bold;
 	text-decoration: underline;
-	
 }
-
