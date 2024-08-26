@@ -8,7 +8,7 @@ import planetaLua from '../../assets/planets/PlanetaLua.png';
 import Lua from '../../assets/planets/lua.png';
 import planetaTerra from '../../assets/planets/PlanetaTerra.png';
 import satelete from '../../assets/planets/satelete.png';
-import Base from '../../assets/planets/base.png';
+import AWS from '../../assets/landingPage/aws1.png';
 
 import naveFrente from '../../assets/nave/naveFrente.png';
 import naveCostas from '../../assets/nave/naveCostas.png';
@@ -33,22 +33,20 @@ export default function LadingPage(): JSX.Element {
 			nave: Phaser.Physics.Arcade.Sprite
 			pntAnel: Phaser.Physics.Arcade.Sprite
 			pntFire: Phaser.Physics.Arcade.Sprite
-			pntLua: Phaser.Physics.Arcade.Sprite
 			luaTerra: Phaser.Physics.Arcade.Sprite
 			pntTerra: Phaser.Physics.Arcade.Sprite
 			sateleteChat: Phaser.Physics.Arcade.Sprite
-			base: Phaser.Physics.Arcade.Sprite
+			AWS: Phaser.Physics.Arcade.Sprite
 			background: Phaser.GameObjects.Sprite
 			constructor() {
 				super({ key: 'MyGameScene' });
 				this.nave = {} as Phaser.Physics.Arcade.Sprite;
 				this.pntAnel = {} as Phaser.Physics.Arcade.Sprite;
 				this.pntFire = {} as Phaser.Physics.Arcade.Sprite;
-				this.pntLua = {} as Phaser.Physics.Arcade.Sprite;
 				this.luaTerra = {} as Phaser.Physics.Arcade.Sprite;
 				this.pntTerra = {} as Phaser.Physics.Arcade.Sprite;
 				this.sateleteChat = {} as Phaser.Physics.Arcade.Sprite;
-				this.base = {} as Phaser.Physics.Arcade.Sprite;
+				this.AWS = {} as Phaser.Physics.Arcade.Sprite;
 				this.background = {} as Phaser.GameObjects.Sprite;
 			}
 
@@ -64,11 +62,10 @@ export default function LadingPage(): JSX.Element {
 
 			setupColliders() {
 				this.physics.add.collider(this.nave, this.pntTerra, () => this.handleCollision("planetTerra"));
-				this.physics.add.collider(this.nave, this.pntLua, () => this.handleCollision("planetLua"));
 				this.physics.add.collider(this.nave, this.pntFire, () => this.handleCollision("planetFire"));
 				this.physics.add.collider(this.nave, this.pntAnel, () => this.handleCollision("planetAnel"));
 				this.physics.add.collider(this.nave, this.sateleteChat, () => this.handleCollision("satelite"));
-				this.physics.add.collider(this.nave, this.base, () => this.handleCollision("base"));
+				this.physics.add.collider(this.nave, this.AWS, () => this.handleCollision("base"));
 				this.physics.add.collider(this.nave, this.luaTerra, () => this.handleCollision("Lua"));
 			}
 
@@ -80,7 +77,7 @@ export default function LadingPage(): JSX.Element {
 				this.load.image("planetLua", planetaLua);
 				this.load.image('planetTerra', planetaTerra);
 				this.load.image('satelete', satelete);
-				this.load.image('base', Base);
+				this.load.image('AWS', AWS);
 				this.load.image('Lua', Lua);
 
 				this.load.image('naveFrente', naveFrente);
@@ -90,48 +87,51 @@ export default function LadingPage(): JSX.Element {
 			}
 
 			resizee() {
-					const containerWidth = window.innerWidth;
-					const containerHeight = window.innerHeight;
+				const containerWidth = window.innerWidth;
+				const containerHeight = window.innerHeight;
 
-					// Redimensionar o plano de fundo
-					this.background.setScale(containerWidth / this.background.width, containerHeight / this.background.height);
-					this.background.setPosition(containerWidth / 2, containerHeight / 2);
+				// Redimensionar o plano de fundo
+				this.background.setScale(containerWidth / this.background.width, containerHeight / this.background.height);
+				this.background.setPosition(containerWidth / 2, containerHeight / 2);
 
-					// Reposicionar todos os elementos na tela
-					this.pntTerra.x = containerWidth * 0.6;
-					this.pntTerra.y = containerHeight * 0.3;
-					this.luaTerra.x = containerWidth * 0.57;
-					this.luaTerra.y = containerHeight * 0.25;
-					this.pntLua.x = containerWidth * 0.9;
-					this.pntLua.y = containerHeight * 0.1;
-					this.pntFire.x = containerWidth * 0.1;
-					this.pntFire.y = containerHeight * 0.2;
-					this.pntAnel.x = containerWidth * 0.9;
-					this.pntAnel.y = containerHeight * 0.8;
-					this.sateleteChat.x = containerWidth * 0.6;
-					this.sateleteChat.y = containerHeight * 0.7;
-					this.base.x = containerWidth * 0.1;
-					this.base.y = containerHeight * 0.9;
+				// Reposicionar todos os elementos na tela
+				this.pntTerra.x = containerWidth * 0.6;
+				this.pntTerra.y = containerHeight * 0.3;
+				this.luaTerra.x = containerWidth * 0.57;
+				this.luaTerra.y = containerHeight * 0.25;
+				this.pntFire.x = containerWidth * 0.1;
+				this.pntFire.y = containerHeight * 0.2;
+				this.pntAnel.x = containerWidth * 0.9;
+				this.pntAnel.y = containerHeight * 0.8;
+				this.sateleteChat.x = containerWidth * 0.6;
+				this.sateleteChat.y = containerHeight * 0.7;
+				this.AWS.x = containerWidth * 0.92;
+				this.AWS.y = containerHeight * 0.2;
 
-					// Reposicionar a nave no centro da tela
-					this.nave.x = containerWidth / 2;
-					this.nave.y = containerHeight / 2;
+				// Reposicionar a nave no centro da tela
+				this.nave.x = containerWidth / 2;
+				this.nave.y = containerHeight / 2;
 
-					//redimecionar a nave
+				//redimecionar a navex
+				if (this.physics.world) {
 					this.physics.world.setBounds(0, 0, containerWidth, containerHeight);
 				}
+			}
 
 			checkResize() {
 				// Adiciona um ouvinte de evento para o redimensionamento da janela
 				window.addEventListener('resize', () => {
 					this.resizee();
 				});
-
 			}
 
 			create() {
 				const containerWidth = this.scale.width;
 				const containerHeight = this.scale.height;
+
+				this.input.on('pointerdown', () => {
+					setCollisionPnt('');
+				});
 
 				// added background in the center of the scrren
 				this.background = this.add.sprite(containerWidth / 2, containerHeight / 2, "background");
@@ -143,16 +143,14 @@ export default function LadingPage(): JSX.Element {
 				this.nave.setScale(this.calculeScaleNave(containerWidth / 2, containerHeight / 2)); // Redimensiona a nave para que ela seja proporcional ao tamanho da tela
 
 				this.pntFire = this.physics.add.sprite((containerWidth * 0.1), (containerHeight * 0.2), "planetFire").setImmovable()
-				this.pntLua = this.physics.add.sprite((containerWidth * 0.9), (containerHeight * 0.1), "planetLua").setImmovable()
 				this.pntAnel = this.physics.add.sprite((containerWidth * 0.9), (containerHeight * 0.8), "planetAnel").setImmovable()
 				this.pntTerra = this.physics.add.sprite((containerWidth * 0.6), (containerHeight * 0.3), "planetTerra").setImmovable()
 				this.luaTerra = this.physics.add.sprite((containerWidth * 0.57), (containerHeight * 0.25), "Lua").setImmovable()
 				this.sateleteChat = this.physics.add.sprite((containerWidth * 0.6), (containerHeight * 0.7), "satelete").setImmovable()
-				this.base = this.physics.add.sprite((containerWidth * 0.1), (containerHeight * 0.9), "base").setImmovable()
+				this.AWS = this.physics.add.sprite((containerWidth * 0.92), (containerHeight * 0.2), "AWS").setImmovable()
 
-				this.base.setScale(0.1)
+				this.AWS.setScale(0.28)
 				this.luaTerra.setScale(0.3)
-				this.pntLua.setScale(0.4);
 				this.pntTerra.setScale(0.7)
 				this.sateleteChat.setScale(0.2)
 				this.sateleteChat.setAngle(295)
@@ -163,7 +161,6 @@ export default function LadingPage(): JSX.Element {
 			}
 
 			update() {
-
 				const curso = this.input.keyboard?.createCursorKeys();
 
 				if (!curso) return
@@ -247,15 +244,11 @@ export default function LadingPage(): JSX.Element {
 		};
 	}, []);
 
-	const cssGameContainer: React.CSSProperties = {
-		height: '100vh !important',
-		width: '100vw !important',
-	}
 
 	return (
-		<div ref={gameContainerRef} style={cssGameContainer}>
-			{collisionPnt === 'planetTerra' && <Perfil />}
-			<Perfil />
+		<div ref={gameContainerRef} >
+			{collisionPnt === 'planetTerra' && <Perfil closeProfile={setCollisionPnt} />}
+			{/* <Perfil closeProfile={setCollisionPnt} /> */}
 		</div>
 	)
 }

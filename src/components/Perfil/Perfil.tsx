@@ -2,8 +2,14 @@ import PersonalInformation from './PersonalInformation';
 import PhotoPerfil from './PhotoPerfil';
 import background from '../../assets/perfil/bg.png'
 import FolderPerfil from './Footer';
+import { useRef } from 'react';
 
-export default function Perfil() {
+type Profile = {
+	closeProfile: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Perfil({closeProfile}: Profile) {
+
 	const cssPerfil: React.CSSProperties = {
 		position: 'absolute',
 		left: '50%',
@@ -25,6 +31,8 @@ export default function Perfil() {
 		height: '45rem',
 		padding: '5rem',
 	}
+
+
 	return (
 		<div style={cssPerfil}>
 			<div style={cssDivAux}>

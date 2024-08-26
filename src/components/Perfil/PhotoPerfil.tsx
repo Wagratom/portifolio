@@ -4,6 +4,7 @@ import luffyIndo from '../../assets/perfil/remoto.gif';
 import ButtonPerfil from './ButtonPerfil';
 import { useRef } from 'react';
 
+
 export default function PhotoPerfil() {
 	let gifLuffy = useRef<HTMLImageElement>(null);
 
@@ -56,14 +57,14 @@ export default function PhotoPerfil() {
 		<div style={mainDiv}>
 			<div style={cssButtons}>
 				<ButtonPerfil
-					content="Presencial"
-					type="button"
-					function={setLuffyFugindo}
-				/>
-				<ButtonPerfil
 					content="Remoto"
 					type="button"
 					function={setLuffyIndo}
+				/>
+				<ButtonPerfil
+					content="Presencial"
+					type="button"
+					function={setLuffyFugindo}
 				/>
 			</div>
 			<div style={{ display: 'flex' }}>
