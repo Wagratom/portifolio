@@ -5,7 +5,7 @@ const projetos: Projeto[] = [
 		name: 'Libft',
 		objective: 'Criação de mini biblioteca em C',
 		bonus: 'Criação de funções adicionais para linked list',
-		tags: ['C', 'Makefile', 'Ponteiros', 'Manipulação de Memoria']
+		tags: ['C', 'Makefile', 'Ty Primitivos', 'Ponteiros', 'Manipulação de Memoria', 'Linked List', 'Recursão', '...']
 	},
 	{
 		name: 'Get Next Line',
@@ -29,13 +29,13 @@ const projetos: Projeto[] = [
 		name: 'So_Long',
 		objective: 'Criar um jogo 2D simples, seguindo as regras de um mapa específico.',
 		bonus: 'fazer o jogador perder ao tocar em um inimigo patrulheiro, adicionar animação / exibir a contagem de movimentos diretamente na ',
-		tags: ['Matrizes', 'MiniLibX', 'Sprites']
+		tags: ['Manipulação de Matrizes', 'MiniLibX', 'Sprites']
 	},
 	{
 		name: 'Pipex',
 		objective: 'Projeto de manipulação de pipes para executar comandos de shell e redirecionar arquivos.',
 		bonus: 'Suporte para múltiplos pipes e operadores "<<" e ">>" quando o primeiro parâmetro é "here_doc".',
-		tags: ['Pipes', 'Processos', 'Shell Commands', 'Redirecionamento de Arquivos']
+		tags: ['Pipes', 'Processos', 'Shell Commands', 'Redirecionamento de I/O']
 	},
 	{
 		name: 'Push Swap',
@@ -54,7 +54,7 @@ const projetos: Projeto[] = [
 		name: 'Philo',
 		objective: 'Simular threads representando filósofos em uma mesa redonda, onde eles comem, pensam e dormem, evitando a fome.',
 		bonus: 'Implementar uma versão de bônus do programa que utiliza processos e semáforos em vez de threads e mutexes.',
-		tags: ['Threads', 'Mutexes', 'Semáforos']
+		tags: ['Manipulação de Threads', 'Mutexes', 'Semáforos']
 	},
 	{
 		name: 'Net_Practice',
@@ -74,27 +74,33 @@ const projetos: Projeto[] = [
 		tags: ['C++ 98', 'Classes', 'Orientação a Objetos', 'iteratores', 'referencias', ' ...']
 	},
 	{
-		name : 'Inception',
-		objective : 'Subir uma aplicação Docker usando docker-compose para criar contêineres para NGINX, WordPress e MariaDB, seguindo regras específicas. (Não usar DockerHub, entre outras)',
-		bonus : 'Cache Redis para WordPress, servidor FTP, site estático, Adminer e serviço de escolha.',
-		tags : ['Docker-compose', 'Volumes, Networks, Dockerfiles', 'Administração de Sistemas']
+		name: 'Inception',
+		objective: 'Subir uma aplicação Docker usando docker-compose para criar contêineres para NGINX, WordPress e MariaDB, seguindo regras específicas. (Não usar DockerHub, entre outras)',
+		bonus: 'Cache Redis para WordPress, servidor FTP, site estático, Adminer e serviço de escolha.',
+		tags: ['Docker-compose', 'Volumes', 'Networks', 'Dockerfiles', 'Administração de Sistemas']
 	},
 	{
-		name : 'Webserv',
-		objective : 'Desenvolver um servidor HTTP em C++ 98, capaz de lidar com multiplos clientes e suportar métodos como HTTP, GET, POST, DELETE. Status de erro...',
-		bonus : 'Bônus: Adicionar suporte a cookies e gerenciamento de sessões, lidar com vários programas CGI.',
-		tags : ['HTTP', 'CGI', 'Sockets', 'Manipulação de I/O', 'NGINX']
+		name: 'Webserv',
+		objective: 'Desenvolver um servidor HTTP em C++ 98, capaz de lidar com multiplos clientes e suportar métodos como HTTP, GET, POST, DELETE. Status de erro...',
+		bonus: 'Bônus: Adicionar suporte a cookies e gerenciamento de sessões, lidar com vários programas CGI.',
+		tags: ['Protocolo HTTP', 'Comunicação Websocket', 'CGI', 'Sockets', 'Manipulação de I/O', 'NGINX', '...']
 	},
 	{
-		name : 'Transcendence',
-		objective : 'Desenvolver um jogo web multiplayer em tempo real de Pong, com funcionalidades como loja, chat, e partidas 1x1.',
-		tags : ['Node.js', 'React', 'Websockets', 'Prisma', 'Design Patterns', ' ...']
+		name: 'Transcendence',
+		objective: 'Desenvolver um jogo web multiplayer em tempo real de Pong, com funcionalidades como loja, chat, e partidas 1x1.',
+		tags: ['Nestjs', 'React', 'Docker compose', 'Infra', 'ORM', 'Design Patterns', 'Modelagem de Dados', '...']
 	}
 ];
 
 export default function Projects42() {
+	const cssDivMain: React.CSSProperties = {
+		color: 'black',
+		fontSize: '1.6rem',
+		fontFamily: 'pixel, Arial, sans-serif',
+	}
+
 	return (
-		<div>
+		<div style={cssDivMain}>
 			<div className='mb-3 bg-light p-3 rounded shadow-sm'>
 				<p>Os projetos foram organizados em uma progressão de dificuldade, com cada um abordando os principais
 					pontos que se tornarão alicerce para os projetos subsequentes. Por exemplo, o conhecimento em linguagem C
@@ -110,9 +116,16 @@ export default function Projects42() {
 						<strong>Bonus: </strong>{projeto.bonus}</p>
 					<hr className=''></hr>
 					<div className='d-flex flex-wrap'>
-						{projeto.tags.map((tag, index) => (
-							<p className='ms-3 fw-bold'>#{tag}</p>)
-						)}
+						{
+							projeto.tags.map((tag) => (
+								<p
+									style={{ backgroundColor: '#8080806e' }}
+									className='ms-3 fw-bold border p-2 rounded'
+								>
+									{tag}
+								</p>
+							))
+						}
 					</div>
 				</div>
 			))}

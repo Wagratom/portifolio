@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Phaser from "phaser";
 import background from "../../assets/planets/backgrounds/backgroundLanderPage.jpg";
 import planetaAnel from '../../assets/planets/planetaJupter.png';
-import planetaFire from '../../assets/planets/planetaFire.png';
+import _42SP from '../../assets/landingPage/42SP.png';
 import planetaLua from '../../assets/planets/PlanetaLua.png';
 import Lua from '../../assets/planets/lua.png';
 import planetaTerra from '../../assets/planets/PlanetaTerra.png';
@@ -15,6 +15,7 @@ import naveCostas from '../../assets/nave/naveCostas.png';
 import naveDescendo from '../../assets/nave/naveDescendo.png';
 import naveLateral from '../../assets/nave/naveLateral.png';
 import Perfil from "../Perfil/Perfil";
+import PageSchool42 from "../PageSchool42/PageSchool42";
 
 export type dataConvite = {
 	otherId: string,
@@ -32,7 +33,7 @@ export default function LadingPage(): JSX.Element {
 		class GameData extends Phaser.Scene {
 			nave: Phaser.Physics.Arcade.Sprite
 			pntAnel: Phaser.Physics.Arcade.Sprite
-			pntFire: Phaser.Physics.Arcade.Sprite
+			pnt42SP: Phaser.Physics.Arcade.Sprite
 			luaTerra: Phaser.Physics.Arcade.Sprite
 			pntTerra: Phaser.Physics.Arcade.Sprite
 			sateleteChat: Phaser.Physics.Arcade.Sprite
@@ -42,7 +43,7 @@ export default function LadingPage(): JSX.Element {
 				super({ key: 'MyGameScene' });
 				this.nave = {} as Phaser.Physics.Arcade.Sprite;
 				this.pntAnel = {} as Phaser.Physics.Arcade.Sprite;
-				this.pntFire = {} as Phaser.Physics.Arcade.Sprite;
+				this.pnt42SP = {} as Phaser.Physics.Arcade.Sprite;
 				this.luaTerra = {} as Phaser.Physics.Arcade.Sprite;
 				this.pntTerra = {} as Phaser.Physics.Arcade.Sprite;
 				this.sateleteChat = {} as Phaser.Physics.Arcade.Sprite;
@@ -62,7 +63,7 @@ export default function LadingPage(): JSX.Element {
 
 			setupColliders() {
 				this.physics.add.collider(this.nave, this.pntTerra, () => this.handleCollision("planetTerra"));
-				this.physics.add.collider(this.nave, this.pntFire, () => this.handleCollision("planetFire"));
+				this.physics.add.collider(this.nave, this.pnt42SP, () => this.handleCollision("planet42SP"));
 				this.physics.add.collider(this.nave, this.pntAnel, () => this.handleCollision("planetAnel"));
 				this.physics.add.collider(this.nave, this.sateleteChat, () => this.handleCollision("satelite"));
 				this.physics.add.collider(this.nave, this.AWS, () => this.handleCollision("base"));
@@ -73,7 +74,7 @@ export default function LadingPage(): JSX.Element {
 				// Carregue suas imagens aqui, se necessário
 				this.load.image("background", background);
 				this.load.image("planetAnel", planetaAnel);
-				this.load.image("planetFire", planetaFire);
+				this.load.image("42SP", _42SP);
 				this.load.image("planetLua", planetaLua);
 				this.load.image('planetTerra', planetaTerra);
 				this.load.image('satelete', satelete);
@@ -99,8 +100,8 @@ export default function LadingPage(): JSX.Element {
 				this.pntTerra.y = containerHeight * 0.3;
 				this.luaTerra.x = containerWidth * 0.57;
 				this.luaTerra.y = containerHeight * 0.25;
-				this.pntFire.x = containerWidth * 0.1;
-				this.pntFire.y = containerHeight * 0.2;
+				this.pnt42SP.x = containerWidth * 0.1;
+				this.pnt42SP.y = containerHeight * 0.2;
 				this.pntAnel.x = containerWidth * 0.9;
 				this.pntAnel.y = containerHeight * 0.8;
 				this.sateleteChat.x = containerWidth * 0.6;
@@ -142,7 +143,7 @@ export default function LadingPage(): JSX.Element {
 				this.nave.setCollideWorldBounds(true); // Define a colisão com os limites do mundo
 				this.nave.setScale(this.calculeScaleNave(containerWidth / 2, containerHeight / 2)); // Redimensiona a nave para que ela seja proporcional ao tamanho da tela
 
-				this.pntFire = this.physics.add.sprite((containerWidth * 0.1), (containerHeight * 0.2), "planetFire").setImmovable()
+				this.pnt42SP = this.physics.add.sprite((containerWidth * 0.1), (containerHeight * 0.2), "42SP").setImmovable()
 				this.pntAnel = this.physics.add.sprite((containerWidth * 0.9), (containerHeight * 0.8), "planetAnel").setImmovable()
 				this.pntTerra = this.physics.add.sprite((containerWidth * 0.6), (containerHeight * 0.3), "planetTerra").setImmovable()
 				this.luaTerra = this.physics.add.sprite((containerWidth * 0.57), (containerHeight * 0.25), "Lua").setImmovable()
@@ -154,6 +155,7 @@ export default function LadingPage(): JSX.Element {
 				this.pntTerra.setScale(0.7)
 				this.sateleteChat.setScale(0.2)
 				this.sateleteChat.setAngle(295)
+				this.pnt42SP.setScale(0.2)
 
 				this.physics.world.setBounds(0, 0, containerWidth, containerHeight);
 				this.setupColliders();
@@ -247,8 +249,8 @@ export default function LadingPage(): JSX.Element {
 
 	return (
 		<div ref={gameContainerRef} >
-			{collisionPnt === 'planetTerra' && <Perfil closeProfile={setCollisionPnt} />}
-			{/* <Perfil closeProfile={setCollisionPnt} /> */}
+			{collisionPnt === 'planetTerra' && <Perfil />}
+			{collisionPnt === 'planet42SP' && <PageSchool42 />}
 		</div>
 	)
 }

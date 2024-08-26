@@ -1,4 +1,4 @@
-import backgroundPhoto from '../../assets/perfil/ww.png';
+import backgroundPhoto from '../../assets/perfil/bgPhoto.png';
 import luffyFugindo from '../../assets/perfil/presencial.gif';
 import luffyIndo from '../../assets/perfil/remoto.gif';
 import ButtonPerfil from './ButtonPerfil';
@@ -12,6 +12,7 @@ export default function PhotoPerfil() {
 		display: 'flex',
 		justifyContent: 'space-between',
 		paddingTop: '1rem',
+		fontFamily: 'pixel, Roboto, sans-serif',
 	};
 
 	const cssImagem: React.CSSProperties = {

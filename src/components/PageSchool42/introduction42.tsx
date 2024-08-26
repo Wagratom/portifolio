@@ -1,7 +1,12 @@
 export default function SchoolInformation() {
+	const cssDivMain: React.CSSProperties = {
+		color: 'white',
+		fontSize: '1.6em',
+		fontFamily: 'pixel, Arial, sans-serif',
+	}
 	return (
-		<div className="text-white">
-			<h2 className='text-center'>Projetos 42 São Paulo</h2>
+		<div style={cssDivMain}>
+			<h2 className='text-center'>42 São Paulo</h2>
 			<p>Seja bem-vindo à 42 São Paulo, uma escola de programação que desafia as convenções da educação em tecnologia e abre portas para uma jornada de aprendizado única e transformadora. Aqui na 42 São Paulo, acreditamos que a inovação e o sucesso na indústria de tecnologia são moldados por abordagens de ensino não convencionais e por alunos motivados a superar desafios.</p>
 			<p>Na 42 São Paulo, você aprenderá programação resolvendo desafios e trabalhando em projetos reais desde o primeiro dia. Nossos alunos aplicam seu conhecimento em situações do mundo real, desenvolvendo habilidades práticas e relevantes.</p>
 			<p>Aqui, não há professores. A avaliação é baseada no seu desempenho em projetos e desafios práticos, refletindo as habilidades que você adquiriu e sua capacidade de aplicá-las por conta própria.</p>

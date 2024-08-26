@@ -3,6 +3,8 @@ export default function PersonalInformation() {
 	const cssInfoProfile: React.CSSProperties = {
 		color: 'white',
 		fontSize: '1.5rem',
+		fontFamily: 'pixel, Roboto, sans-serif',
+		textAlign: 'justify',
 	}
 	return (
 		<div style={cssInfoProfile}>

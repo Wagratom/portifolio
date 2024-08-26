@@ -10,6 +10,7 @@ type propsButtonConfigurations = {
 export default function ButtonPerfil(props: propsButtonConfigurations): JSX.Element {
 	const cssButton: React.CSSProperties = {
 		border: "none",
+
 		backgroundImage: `url(${backgroundButton})`,
 		backgroundSize: "cover",
 		backgroundColor: "transparent",
@@ -25,28 +26,19 @@ export default function ButtonPerfil(props: propsButtonConfigurations): JSX.Elem
 		padding: "0.6rem 0.5rem 0.5rem 0.5rem",
 		gap: "0.5rem",
 		cursor: "pointer",
-
-	}
-
-	const cssButtonDiv: React.CSSProperties = {
-		display: "flex",
-		alignItems: "end",
-		paddingBottom: "1rem",
 	}
 
 	const cssParagraph: React.CSSProperties = {
-		fontSize: "1.7rem",
+		fontSize: "1.5rem",
 	}
 
 	return (
-		<div style={cssButtonDiv}>
-			<button
-				style={cssButton}
-				onClick={() => props.function ? props.function() : null}
-				type={props.type}
-			>
-				<p style={cssParagraph}>{props.content}</p>
-			</button>
-		</div>
+		<button
+			style={cssButton}
+			onClick={() => props.function ? props.function() : null}
+			type={props.type}
+		>
+			<p style={cssParagraph}>{props.content}</p>
+		</button>
 	)
 }

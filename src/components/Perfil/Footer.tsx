@@ -9,8 +9,9 @@ export default function FolderPerfil(): JSX.Element {
 		left: '50%',
 		transform: 'translateX(-50%)',
 
-		padding: '5rem 5rem 5rem',
+		padding: '0 5rem 6rem 5rem',
 		width: '100%',
+		color: 'white',
 	}
 
 	const contentFooter: React.CSSProperties = {
@@ -22,7 +23,7 @@ export default function FolderPerfil(): JSX.Element {
 	const contentRedirectsIcons: React.CSSProperties = {
 		display: 'flex',
 		gap: '1rem',
-		marginTop: '1rem',
+		marginTop: '0.5rem',
 	}
 
 	return (
@@ -30,13 +31,25 @@ export default function FolderPerfil(): JSX.Element {
 			<hr />
 			<div style={contentFooter}>
 				<div style={contentRedirectsIcons}>
-					<a style={{color: 'white'}} type="button" href="https://github.com/Wagratom">
+					<a
+						className="text-white"
+						target="_blank"
+
+						type="button" href="https://github.com/Wagratom">
 						<FaGithub size={30} />
 					</a>
-					<a style={{color: 'white'}} type="button" href="https://www.instagram.com/wagratom/">
+					<a
+						className="text-white"
+						target="_blank"
+
+						type="button" href="https://www.instagram.com/wagratom/">
 						<IoLogoInstagram size={30} />
 					</a>
-					<a style={{color: 'white'}} type="button" href="https://www.linkedin.com/in/wagratom-wallas-9657a421a/">
+					<a
+						className="text-white"
+						target="_blank"
+
+						type="button" href="https://www.linkedin.com/in/wagratom-wallas-9657a421a/">
 						<AiOutlineLinkedin size={30} />
 					</a>
 				</div>

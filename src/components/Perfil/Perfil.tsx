@@ -4,11 +4,8 @@ import background from '../../assets/perfil/bg.png'
 import FolderPerfil from './Footer';
 import { useRef } from 'react';
 
-type Profile = {
-	closeProfile: React.Dispatch<React.SetStateAction<string>>;
-}
 
-export default function Perfil({closeProfile}: Profile) {
+export default function Perfil() {
 
 	const cssPerfil: React.CSSProperties = {
 		position: 'absolute',
@@ -23,6 +20,7 @@ export default function Perfil({closeProfile}: Profile) {
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
+
 	}
 
 	const cssDivAux: React.CSSProperties = {
