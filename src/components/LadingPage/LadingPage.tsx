@@ -16,6 +16,7 @@ import naveDescendo from '../../assets/nave/naveDescendo.png';
 import naveLateral from '../../assets/nave/naveLateral.png';
 import Perfil from "../Perfil/Perfil";
 import PageSchool42 from "../PageSchool42/PageSchool42";
+import AWSPage from "../AWSPage/AWSPage";
 
 export type dataConvite = {
 	otherId: string,
@@ -66,7 +67,7 @@ export default function LadingPage(): JSX.Element {
 				this.physics.add.collider(this.nave, this.pnt42SP, () => this.handleCollision("planet42SP"));
 				this.physics.add.collider(this.nave, this.pntAnel, () => this.handleCollision("planetAnel"));
 				this.physics.add.collider(this.nave, this.sateleteChat, () => this.handleCollision("satelite"));
-				this.physics.add.collider(this.nave, this.AWS, () => this.handleCollision("base"));
+				this.physics.add.collider(this.nave, this.AWS, () => this.handleCollision("AWS"));
 				this.physics.add.collider(this.nave, this.luaTerra, () => this.handleCollision("Lua"));
 			}
 
@@ -251,6 +252,7 @@ export default function LadingPage(): JSX.Element {
 		<div ref={gameContainerRef} >
 			{collisionPnt === 'planetTerra' && <Perfil />}
 			{collisionPnt === 'planet42SP' && <PageSchool42 />}
+			<AWSPage />
 		</div>
 	)
 }

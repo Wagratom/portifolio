@@ -1,0 +1,5 @@
+.astronauta {
+	background-image: url('../../static/astronauta.jpeg');
+	background-size: cover;
+	background-position: center;
+}
